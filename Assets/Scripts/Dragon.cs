@@ -27,17 +27,18 @@ public class Dragon : Enemy
 
     IEnumerator Shoot()
     {
-        if (!canShoot)
-            yield return null;
 
         float ShootDelay = Random.Range(1.5f,2.0f);
         yield return new WaitForSeconds(ShootDelay);
-        animator.SetBool("FireballShoot", true);
-        yield return new WaitForSeconds(0.33f);
-        GameObject newFireball1 = Instantiate(Fireball, shotPoint.position, shotPoint.rotation);
-        newFireball1.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
-        animator.SetBool("FireballShoot", false);
-        StartCoroutine(Shoot());
+        if (canShoot)
+        {
+            animator.SetBool("FireballShoot", true);
+            yield return new WaitForSeconds(0.33f);
+            GameObject newFireball1 = Instantiate(Fireball, shotPoint.position, shotPoint.rotation);
+            newFireball1.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+            animator.SetBool("FireballShoot", false);
+            StartCoroutine(Shoot());
+        }
     }
 
     public override void Die()
