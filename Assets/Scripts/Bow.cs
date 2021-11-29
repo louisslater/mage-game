@@ -6,6 +6,9 @@ using UnityEngine;
 public class Bow : MonoBehaviour
 {
     public Animator animator;//show the bow being pulled back
+    
+    public GameObject arrow;//arrow that fires from bow
+    
     public float launchForce = 0.5f;//initial force to fire arrow
     public Transform shotPoint;//the point the arrow comes from
     public bool hasShot = false;//has the arrow been shot
