@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+//this code controls the character movement
+//it is complex to do in unity so has been copied from here then modified 
+//to make the correct behaviour
+//https://www.codegrepper.com/code-examples/c/wasd+movement+script+unity+2d
+
 public class CharacterController2D : MonoBehaviour
 {
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.

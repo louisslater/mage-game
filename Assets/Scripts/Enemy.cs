@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this class is inherited by dragon and mage etc so that we can just
+//call Die without having to handle it for each class
 public abstract class Enemy : MonoBehaviour
 {
-    public Animator animator;
+    public Animator animator;//shows the enemy is hurt
 
-    public int maxHealth = 100;
-    public int currentHealth;
+    public int maxHealth = 100;//initial health
+    public int currentHealth;//current health
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = maxHealth;// start at max health
     }
 
     void Update()
@@ -22,9 +24,9 @@ public abstract class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        //reduce enemy health and die when no health is left
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
-
 
         if (currentHealth <= 0)
         {
@@ -32,6 +34,7 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
+    //this is implmented in each enemy such as mage, dragon
     public abstract void Die();
 
 }

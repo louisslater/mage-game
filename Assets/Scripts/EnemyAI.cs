@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
+//this tells the enemy how and when to move
 public class EnemyAI : MonoBehaviour
 {
-    public Transform enemyGFX;
-    public Transform shotPoint;
+    public Transform enemyGFX;//enemy graphics
+    public Transform shotPoint;//the point that the enemy shoots from
 
     public Transform target;
 

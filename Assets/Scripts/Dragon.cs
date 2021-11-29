@@ -2,23 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//the dragon that flies around firing fireballs
 [RequireComponent(typeof(Rigidbody2D))]
 public class Dragon : Enemy
 {
-    public GameObject Fireball;
-    public Transform shotPoint;
-    public float launchForce = 4f;
-    bool canShoot = true;
+    public GameObject Fireball;//the fireball that the dragon fires
+    public Transform shotPoint;//the point from which the fireball is fired
+    public float launchForce = 4f;//the force to fire the fireball
+    bool canShoot = true;//true if a fireball can currently be shot
 
     public void Start()
     {
-        //float ShootDelay = Random.Range(0.25f,1.0f);
+        //start shooting fireballs straight away
         StartCoroutine(Shoot());
         
     }
     void Update()
     {
-
+        //calculate the angle to fire the fireball
+        //so it will hit the player
         Vector2 firePosition = shotPoint.transform.position;
         Vector2 playerPosition = GameObject.Find("Player").transform.position;
         Vector2 direction = playerPosition - firePosition;
@@ -27,11 +29,13 @@ public class Dragon : Enemy
 
     IEnumerator Shoot()
     {
-
+        //wait for a random time between fireballs
         float ShootDelay = Random.Range(1.5f,2.0f);
         yield return new WaitForSeconds(ShootDelay);
         if (canShoot)
         {
+            //if we can shoot then fire the fireball with the right velocity
+            //showing the animation
             animator.SetBool("FireballShoot", true);
             yield return new WaitForSeconds(0.33f);
             GameObject newFireball1 = Instantiate(Fireball, shotPoint.position, shotPoint.rotation);
@@ -43,6 +47,7 @@ public class Dragon : Enemy
 
     public override void Die()
     {
+        //handle the dragon dying and make hßim fall out of the air
         Debug.Log("Dragon.Die");
         currentHealth = 0;
         animator.SetBool("IsDead", true);
