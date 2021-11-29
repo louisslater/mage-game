@@ -41,11 +41,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         currentHealth = 0;
-        //animator.SetBool("IsDead", true);
+        animator.SetBool("IsDead", true);
 
-        GetComponent<CapsuleCollider2D>().enabled = false;
-        GetComponent<Rigidbody2D>().isKinematic = true;
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        this.enabled = false;
     }
 }

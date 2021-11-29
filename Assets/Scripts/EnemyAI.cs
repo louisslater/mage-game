@@ -76,12 +76,12 @@ public class EnemyAI : MonoBehaviour
         if (rb.velocity.x >= 0.01f)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
-            shotPoint.localPosition = new Vector3(0.4f, 0f, 0f);
+            shotPoint.localPosition = new Vector3(0.15f, 0f, 0f);
         }
         else if (rb.velocity.x <= -0.01f)
         {
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
-            shotPoint.localPosition = new Vector3(-0.4f, 0f, 0f);
+            shotPoint.localPosition = new Vector3(-0.15f, 0f, 0f);
         }
     }
 }

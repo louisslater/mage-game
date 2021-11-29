@@ -5,10 +5,11 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
 
+    public Animator animator;
+
     public int damage = 10;
 
     Rigidbody2D rigidBody;
-    bool hasHit;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,14 @@ public class Fireball : MonoBehaviour
     }
     IEnumerator KillFireball()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
+
+    IEnumerator FireballExplode()
+    {
+        animator.SetBool("Explode", true);
+        yield return new WaitForSeconds(0.25f);
         Destroy(gameObject);
     }
 
@@ -43,7 +51,12 @@ public class Fireball : MonoBehaviour
         if (player != null)
         {
             player.DamagePlayer(damage);
-            Destroy(gameObject);
+            GetComponent<CircleCollider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().isKinematic = true;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            StartCoroutine(FireballExplode());
+            //this.enabled = false;
+            //Destroy(gameObject);
         }
     }
 }

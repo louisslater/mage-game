@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour
     }
 
     void Update()
-    {
+    { 
 
     }
 

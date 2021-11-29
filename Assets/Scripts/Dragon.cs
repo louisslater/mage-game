@@ -8,13 +8,14 @@ public class Dragon : Enemy
     public GameObject Fireball;
     public Transform shotPoint;
     public float launchForce = 4f;
+    bool canShoot = true;
 
     public void Start()
     {
         //float ShootDelay = Random.Range(0.25f,1.0f);
         StartCoroutine(Shoot());
+        
     }
-
     void Update()
     {
 
@@ -24,12 +25,18 @@ public class Dragon : Enemy
         shotPoint.transform.right = direction;
     }
 
-        IEnumerator Shoot()
+    IEnumerator Shoot()
     {
-        float ShootDelay = Random.Range(3.0f,4.0f);
+        if (!canShoot)
+            yield return null;
+
+        float ShootDelay = Random.Range(1.5f,2.0f);
         yield return new WaitForSeconds(ShootDelay);
-        GameObject newFireball = Instantiate(Fireball, shotPoint.position, shotPoint.rotation);
-        newFireball.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+        animator.SetBool("FireballShoot", true);
+        yield return new WaitForSeconds(0.33f);
+        GameObject newFireball1 = Instantiate(Fireball, shotPoint.position, shotPoint.rotation);
+        newFireball1.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+        animator.SetBool("FireballShoot", false);
         StartCoroutine(Shoot());
     }
 
@@ -38,6 +45,7 @@ public class Dragon : Enemy
         Debug.Log("Dragon.Die");
         currentHealth = 0;
         animator.SetBool("IsDead", true);
+        canShoot = false;
 
         GetComponent<Rigidbody2D>().gravityScale = 1f;
         //GetComponent<CapsuleCollider2D>().enabled = false;

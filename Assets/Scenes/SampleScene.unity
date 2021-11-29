@@ -4328,7 +4328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 645184155}
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
 --- !u!95 &645184155
 Animator:
   serializedVersion: 3
@@ -6901,8 +6901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 331506309}
-  maxHealth: 50
-  currentHealth: 0
+  maxHealth: 70
+  currentHealth: 70
   Fireball: {fileID: 5058624437835379885, guid: 87fd1bac9351f3e4dba9033bf7e51d62, type: 3}
   shotPoint: {fileID: 2024285344}
   launchForce: 4
@@ -7016,7 +7016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024285343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18, y: -0.05, z: 0}
+  m_LocalPosition: {x: 0.15, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1951219664}
