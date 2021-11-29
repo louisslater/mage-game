@@ -6,16 +6,16 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
 
-    public Animator animator;
+    public Animator animator;//animates the player
 
-    public Transform attackPoint;
-    public LayerMask enemyLayers;
+    public Transform attackPoint;//the attack point on the player
+    public LayerMask enemyLayers;//contains the enemies
 
-    public float attackRange = 0.5f;
-    public int attackDamage = 40;
+    public float attackRange = 0.5f;//range of player attack
+    public int attackDamage = 40;//amount of damage player attack doess
 
-    public float attackDelay = 0.5f;
-    float nextAttackTime = 0f;
+    public float attackDelay = 0.5f;//time between attacks
+    float nextAttackTime = 0f;//time of next attack
 
     // Update is called once per frame
     void Update()
@@ -24,6 +24,7 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                //if mouse button is down and enough time has passed then attack
                 Attack();
                 nextAttackTime = Time.time + attackDelay;
             }
@@ -32,10 +33,14 @@ public class PlayerCombat : MonoBehaviour
 
     void Attack()
     {
+        //show attack animation for player
         animator.SetTrigger("Attack");
 
+        //get all enemies in attaack range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
+        //damage each enemy in range
+        //using a generic Enemy class to we dont have to detect which enemy has been hit e.g. mage, dragon
         foreach(Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
@@ -44,6 +49,7 @@ public class PlayerCombat : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
+        //draw a wire sphere if attacking
         if (attackPoint == null)
             return;
 

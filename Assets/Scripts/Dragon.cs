@@ -47,7 +47,7 @@ public class Dragon : Enemy
 
     public override void Die()
     {
-        //handle the dragon dying and make hßim fall out of the air
+        //handle the dragon dying and make him fall out of the air
         Debug.Log("Dragon.Die");
         currentHealth = 0;
         animator.SetBool("IsDead", true);
