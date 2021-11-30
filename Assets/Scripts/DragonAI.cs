@@ -4,7 +4,7 @@ using UnityEngine;
 using Pathfinding;
 
 //this tells the enemy how and when to move
-public class EnemyAI : MonoBehaviour
+public class DragonAI : MonoBehaviour
 {
     public Transform enemyGFX;//enemy graphics
     public Transform shotPoint;//the point that the enemy shoots from

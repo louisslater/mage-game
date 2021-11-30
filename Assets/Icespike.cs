@@ -1,0 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Icespike : MonoBehaviour
+{
+
+    public int damage = 2;
+
+    Rigidbody2D rigidBody;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rigidBody = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        StartCoroutine(KillIceSpike());
+    }
+
+    IEnumerator KillIceSpike()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Destroy(gameObject);
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        var speed = rigidBody.velocity.magnitude;
+
+        PlayerHealth player = hitInfo.GetComponent<PlayerHealth>();
+        if (player != null)
+        {
+            player.DamagePlayer((int)Mathf.Round(speed) * damage);
+            //GetComponent<CircleCollider2D>().enabled = false;
+            //this.enabled = false;
+            Destroy(gameObject);
+        }
+    }
+}

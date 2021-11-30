@@ -38,7 +38,7 @@ public class Fireball : MonoBehaviour
     IEnumerator FireballExplode()
     {
         animator.SetBool("Explode", true);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.41f);
         Destroy(gameObject);
     }
 
