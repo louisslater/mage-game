@@ -5,15 +5,16 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
 
-    public Animator animator;
+    public Animator animator;//animation for the fireball
 
-    public int damage = 10;
+    public int damage = 10;//how much damage the fireball does
 
-    Rigidbody2D rigidBody;
+    Rigidbody2D rigidBody;//rigid body part of fireball
 
     // Start is called before the first frame update
     void Start()
     {
+        //set fireball to last a fixed number of seconds
         rigidBody = GetComponent<Rigidbody2D>();
         StartCoroutine(KillFireball());
     }
@@ -31,12 +32,14 @@ public class Fireball : MonoBehaviour
     }
     IEnumerator KillFireball()
     {
+        //kill fireball after some seconds
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
 
     IEnumerator FireballExplode()
     {
+        //show explosion animation then kill fireball
         animator.SetBool("Explode", true);
         yield return new WaitForSeconds(0.41f);
         Destroy(gameObject);
@@ -47,6 +50,8 @@ public class Fireball : MonoBehaviour
     {
         //var speed = rigidBody.velocity.magnitude;
 
+        //if fireball hits player then make player take damage
+        //and explode fireball
         PlayerHealth player = hitInfo.GetComponent<PlayerHealth>();
         if (player != null)
         {
