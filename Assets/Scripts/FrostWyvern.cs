@@ -8,7 +8,7 @@ public class FrostWyvern : Enemy
 {
     public GameObject Projectile;//the projectile that the dragon fires
     public Transform shotPoint;//the point from which the projectile is fired
-    public float launchForce = 20f;//the force to fire the projectile
+    public float launchForce = 15f;//the force to fire the projectile
     bool canShoot = true;//true if a projectile can currently be shot
 
     public void Start()
@@ -30,16 +30,25 @@ public class FrostWyvern : Enemy
     IEnumerator Shoot()
     {
         //wait for a random time between projectiles
-        float ShootDelay = Random.Range(5.0f, 15.0f);
-        yield return new WaitForSeconds(ShootDelay);
+        float shootDelay = Random.Range(0.0f, 8.0f);
+        float spread = Random.Range(-3.0f, 3.0f);
+        yield return new WaitForSeconds(shootDelay);
         if (canShoot)
         {
             //if we can shoot then fire the projectile with the right velocity
             //showing the animation
             animator.SetBool("ProjectileShoot", true);
-            yield return new WaitForSeconds(0.33f);
-            GameObject newprojectile1 = Instantiate(projectile, shotPoint.position, shotPoint.rotation);
+            yield return new WaitForSeconds(0.46f);
+            shotPoint.transform.Rotate(0f, 0f, spread, Space.Self);
+            GameObject newprojectile1 = Instantiate(Projectile, shotPoint.position, shotPoint.rotation);
             newprojectile1.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+            shotPoint.transform.Rotate(0f, 0f, spread, Space.Self);
+            GameObject newprojectile2 = Instantiate(Projectile, shotPoint.position, shotPoint.rotation);
+            newprojectile2.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+            shotPoint.transform.Rotate(0f, 0f, spread, Space.Self);
+            GameObject newprojectile3 = Instantiate(Projectile, shotPoint.position, shotPoint.rotation);
+            newprojectile3.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+            yield return new WaitForSeconds(0.4f);
             animator.SetBool("ProjectileShoot", false);
             StartCoroutine(Shoot());
         }

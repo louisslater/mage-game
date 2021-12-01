@@ -22,7 +22,7 @@ public class Icespike : MonoBehaviour
 
     IEnumerator KillIceSpike()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(3.0f);
         Destroy(gameObject);
     }
 
@@ -41,9 +41,15 @@ public class Icespike : MonoBehaviour
         if (player != null)
         {
             player.DamagePlayer((int)Mathf.Round(speed) * damage);
-            //GetComponent<CircleCollider2D>().enabled = false;
             //this.enabled = false;
-            Destroy(gameObject);
+            if (speed >= 5f)
+            {
+                rigidBody.isKinematic = true;
+                transform.parent = player.transform;
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GetComponent<BoxCollider2D>().enabled = false;
+            }
+            StartCoroutine(KillIceSpike());
         }
     }
 }

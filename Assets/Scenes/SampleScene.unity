@@ -4990,13 +4990,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1230298105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9183a822d186c6d49a0ee4af1e7a0fb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 962d995febdbbf348b15d8bdf54990f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1484448281}
   maxHealth: 300
   currentHealth: 300
-  Fireball: {fileID: 3963367792978838113, guid: f36318d128295e24db51c3ce62e909dc, type: 3}
+  Projectile: {fileID: 3963367792978838113, guid: f36318d128295e24db51c3ce62e909dc, type: 3}
   shotPoint: {fileID: 1085340363}
   launchForce: 20
 --- !u!61 &1230298109
