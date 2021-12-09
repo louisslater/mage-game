@@ -5,7 +5,7 @@ using UnityEngine;
 public class Icespike : MonoBehaviour
 {
 
-    public int damage = 2;
+    public int damage = 1;
 
     Rigidbody2D rigidBody;
 
@@ -46,8 +46,9 @@ public class Icespike : MonoBehaviour
             {
                 rigidBody.isKinematic = true;
                 transform.parent = player.transform;
-                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GetComponent<BoxCollider2D>().enabled = false;
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GetComponent<Rigidbody2D>().isKinematic = true;
             }
             StartCoroutine(KillIceSpike());
         }
