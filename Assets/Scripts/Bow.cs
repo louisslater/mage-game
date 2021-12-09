@@ -8,7 +8,9 @@ public class Bow : MonoBehaviour
     public Animator animator;//show the bow being pulled back
     
     public GameObject arrow;//arrow that fires from bow
-    
+
+    public AudioSource shootSound;
+
     public float launchForce = 0.5f;//initial force to fire arrow
     public Transform shotPoint;//the point the arrow comes from
     public bool hasShot = false;//has the arrow been shot
@@ -48,6 +50,7 @@ public class Bow : MonoBehaviour
                 //make an arrow and set direction depending on where bow is
                 GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
                 newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+                shootSound.Play();
                 //reset to reload bow
                 hasShot = true;
                 canShoot = false;

@@ -6,9 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Dragon : Enemy
 {
+    public AudioSource dragonDie;
+
     public GameObject Fireball;//the fireball that the dragon fires
     public Transform shotPoint;//the point from which the fireball is fired
-    public float launchForce = 4f;//the force to fire the fireball
+    public float launchForce = 6f;//the force to fire the fireball
     bool canShoot = true;//true if a fireball can currently be shot
 
     public void Start()
@@ -61,7 +63,7 @@ public class Dragon : Enemy
         currentHealth = 0;
         animator.SetBool("IsDead", true);
         canShoot = false;
-
+        dragonDie.Play();
         GetComponent<Rigidbody2D>().gravityScale = 1f;
         //GetComponent<CapsuleCollider2D>().enabled = false;
         //GetComponent<Rigidbody2D>().isKinematic = true;
