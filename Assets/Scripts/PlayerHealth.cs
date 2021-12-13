@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public Animator animator;//animator for player dying
 
+    public AudioSource playerHurt;
+
     public int maxHealth = 150;//full health amount for player
     public int currentHealth;//players current health
 
@@ -19,28 +21,29 @@ public class PlayerHealth : MonoBehaviour
         //set to max health
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        RegenerateHealth();
+        StartCoroutine(RegenerateHealth());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     IEnumerator RegenerateHealth()
     {
-        yield return new WaitForSeconds(2f);
-        if (currentHealth < maxHealth)
+        yield return new WaitForSeconds(1f);
+        if (currentHealth < maxHealth && currentHealth != 0)
         {
-            currentHealth = +1;
-            RegenerateHealth();
-
+            currentHealth = currentHealth + 1;
+            healthBar.SetHealth(currentHealth);
         }
+        StartCoroutine(RegenerateHealth());
     }
 
     public void DamagePlayer(int damage)
     {
+        playerHurt.Play();
+
         //take damage off player
         currentHealth -= damage;
         //animator.SetTrigger("Hurt");

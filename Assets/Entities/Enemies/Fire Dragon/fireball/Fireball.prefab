@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5058624437835379886}
   Explode: {fileID: 4507037229971399574}
-  damage: 10
+  damage: 15
 --- !u!82 &4507037229971399574
 AudioSource:
   m_ObjectHideFlags: 0
