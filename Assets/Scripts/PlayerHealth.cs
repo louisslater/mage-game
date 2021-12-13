@@ -19,12 +19,24 @@ public class PlayerHealth : MonoBehaviour
         //set to max health
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        RegenerateHealth();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator RegenerateHealth()
+    {
+        yield return new WaitForSeconds(2f);
+        if (currentHealth < maxHealth)
+        {
+            currentHealth = +1;
+            RegenerateHealth();
+
+        }
     }
 
     public void DamagePlayer(int damage)

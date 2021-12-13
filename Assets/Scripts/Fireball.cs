@@ -7,6 +7,8 @@ public class Fireball : MonoBehaviour
 
     public Animator animator;//animation for the fireball
 
+    public AudioSource Explode;
+
     public int damage = 10;//how much damage the fireball does
 
     Rigidbody2D rigidBody;//rigid body part of fireball
@@ -40,6 +42,7 @@ public class Fireball : MonoBehaviour
     IEnumerator FireballExplode()
     {
         //show explosion animation then kill fireball
+        Explode.Play();
         animator.SetBool("Explode", true);
         yield return new WaitForSeconds(0.41f);
         Destroy(gameObject);

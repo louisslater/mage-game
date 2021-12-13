@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class FrostWyvern : Enemy
 {
+    public AudioSource dragonHurt;
+
+    public GameObject DragonGFX;//the graphics and animations of the dragon
     public GameObject Projectile;//the projectile that the dragon fires
     public GameObject Projectile2;//the projectile that the dragon fires
     public Transform shotPoint;//the point from which the projectile is fired
@@ -76,6 +79,19 @@ public class FrostWyvern : Enemy
         }
     }
 
+    public override void TakeDamage(int damage)
+    {
+        //reduce enemy health and die when no health is left
+        currentHealth -= damage;
+        animator.SetTrigger("Hurt");
+        dragonHurt.Play();
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
     public override void Die()
     {
         //handle the dragon dying and make him fall out of the air
@@ -84,11 +100,11 @@ public class FrostWyvern : Enemy
         animator.SetBool("IsDead", true);
         canShoot = false;
 
-        GetComponent<Rigidbody2D>().gravityScale = 1f;
-        //GetComponent<CapsuleCollider2D>().enabled = false;
-        //GetComponent<Rigidbody2D>().isKinematic = true;
-        //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        //this.enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().isKinematic = true;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        DragonGFX.GetComponent<SpriteRenderer>().enabled = false;
+        this.enabled = false;
     }
 
 }

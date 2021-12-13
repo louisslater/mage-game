@@ -56,6 +56,18 @@ public class Dragon : Enemy
         this.enabled = false;
     }
 
+    public override void TakeDamage(int damage)
+    {
+        //reduce enemy health and die when no health is left
+        currentHealth -= damage;
+        animator.SetTrigger("Hurt");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
     public override void Die()
     {
         //handle the dragon dying and make him fall out of the air

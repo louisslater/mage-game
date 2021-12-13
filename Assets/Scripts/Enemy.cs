@@ -22,17 +22,8 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage)
-    {
-        //reduce enemy health and die when no health is left
-        currentHealth -= damage;
-        animator.SetTrigger("Hurt");
+    public abstract void TakeDamage(int damage);
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
 
     //this is implmented in each enemy such as mage, dragon
     public abstract void Die();
