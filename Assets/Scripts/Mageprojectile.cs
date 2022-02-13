@@ -46,6 +46,7 @@ public class Mageprojectile : MonoBehaviour
         animator.SetBool("Explode", true);
         yield return new WaitForSeconds(0.41f);
         GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }

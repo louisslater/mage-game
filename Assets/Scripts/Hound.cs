@@ -52,7 +52,7 @@ public class Hound : Enemy
         {
             if (distanceToTarget <= 15)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed);
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed + Random.Range(-0.10f,0.1f));
             }
         }
 

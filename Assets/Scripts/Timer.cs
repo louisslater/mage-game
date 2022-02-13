@@ -6,23 +6,29 @@ using System;
 
 public class Timer : MonoBehaviour
 {
+
+    private static DateTime startTime = DateTime.MinValue;
+
     bool stopWatchActive = true;
-    float currentTime;
     public Text currentTimeText;
+
 
     void Start()
     {
-        currentTime = 0;
+        if(startTime== DateTime.MinValue)
+        {
+            startTime = DateTime.Now;
+        }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (stopWatchActive == true)
         {
-            currentTime = currentTime + Time.deltaTime;
+            TimeSpan time = DateTime.Now.Subtract(startTime);
+            currentTimeText.text = time.Minutes.ToString("00") + ":" + time.Seconds.ToString("00") + ":" + time.Milliseconds.ToString("000").Substring(0,2);
         }
-        TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        currentTimeText.text = time.Minutes.ToString("00") + ":" + time.Seconds.ToString("00") + ":" + time.Milliseconds.ToString().Substring(0,2);
+        
     }
 
     public void StartStopwatch()
