@@ -7,7 +7,9 @@ using UnityEngine;
 public class Dragon : Enemy
 {
     public AudioSource dragonDie;
+    public AudioSource dragonShoot;
 
+    public GameObject DragonEnemy; //the fire dragon gameobject
     public GameObject Fireball;//the fireball that the dragon fires
     public Transform shotPoint;//the point from which the fireball is fired
     public float launchForce = 6f;//the force to fire the fireball
@@ -39,6 +41,7 @@ public class Dragon : Enemy
             //if we can shoot then fire the fireball with the right velocity
             //showing the animation
             animator.SetBool("FireballShoot", true);
+            dragonShoot.Play();
             yield return new WaitForSeconds(0.33f);
             GameObject newFireball1 = Instantiate(Fireball, shotPoint.position, shotPoint.rotation);
             newFireball1.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
@@ -53,7 +56,7 @@ public class Dragon : Enemy
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<Rigidbody2D>().isKinematic = true;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        this.enabled = false;
+        DragonEnemy.SetActive(false);
     }
 
     public override void TakeDamage(int damage)
@@ -77,10 +80,7 @@ public class Dragon : Enemy
         canShoot = false;
         dragonDie.Play();
         GetComponent<Rigidbody2D>().gravityScale = 1f;
-        //GetComponent<CapsuleCollider2D>().enabled = false;
-        //GetComponent<Rigidbody2D>().isKinematic = true;
-        //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        //this.enabled = false;
+        StartCoroutine(RemoveDragon());
     }
 
 }

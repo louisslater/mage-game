@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GM
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - Object
   - Enemy Projectile
   - Enemy Projectile 2
-  - 
-  - 
-  - 
+  - Enemies2
+  - Background Object
+  - Checkpoints
   - 
   - 
   - 

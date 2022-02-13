@@ -52,6 +52,18 @@ public class DragonAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+
+        if (distanceToTarget <= 10)
+        {
+            //set the direction and force for the enemy
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+            Vector2 force = direction * speed * Time.deltaTime;
+
+            rb.AddForce(force);
+        }
+
         //if there is no path do nothing
         if (path == null)
             return;
@@ -65,12 +77,6 @@ public class DragonAI : MonoBehaviour
         {
             reachedEndOfPath = false;
         }
-
-        //set the direction and force for the enemy
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-
-        rb.AddForce(force);
 
         //if we havent reached the distance then increase the way point value
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3199761013951960581}
   - component: {fileID: 3199761013951960580}
   - component: {fileID: 3199761013951960587}
-  m_Layer: 0
-  m_Name: candle burnt
+  m_Layer: 9
+  m_Name: candle burnt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

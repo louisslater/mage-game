@@ -12,7 +12,7 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;//contains the enemies
 
     public float attackRange = 0.5f;//range of player attack
-    public int attackDamage = 40;//amount of damage player attack doess
+    public int attackDamage = 40;//amount of damage player attack does
 
     public float attackDelay = 0.5f;//time between attacks
     float nextAttackTime = 0f;//time of next attack

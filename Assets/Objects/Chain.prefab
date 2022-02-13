@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6970284966498603276}
   - component: {fileID: 9145054679506998278}
   - component: {fileID: 8962334083939436716}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -124,7 +124,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 4105086982619089050}
   - component: {fileID: 5305208093010053912}
   - component: {fileID: 8859696996054803238}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -280,7 +280,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 2283125225674466971}
   - component: {fileID: 7603088853218895168}
   - component: {fileID: 1639526190544212895}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -436,7 +436,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -477,7 +477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529421156757232520}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 241165880891596900}
   - component: {fileID: 2637263214369777089}
   - component: {fileID: 7706295937406919081}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -634,7 +634,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 1996312990695278707}
   - component: {fileID: 2885240706706038870}
   - component: {fileID: 8005159826674481074}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,7 +745,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -790,7 +790,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 6192399278626806480}
   - component: {fileID: 2541448778546464708}
   - component: {fileID: 5137161765708293707}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -946,7 +946,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 7472194436952079069}
   - component: {fileID: 7324983942066627588}
   - component: {fileID: 1088132093164939827}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,7 +1057,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1102,7 +1102,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1147,7 +1147,7 @@ GameObject:
   - component: {fileID: 56827043218127647}
   - component: {fileID: 8456555139790272083}
   - component: {fileID: 372358594570461074}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1213,7 +1213,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1258,7 +1258,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 2558333485533540624}
   - component: {fileID: 6779276261940657248}
   - component: {fileID: 4046871020877699044}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1369,7 +1369,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1414,7 +1414,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1459,7 +1459,7 @@ GameObject:
   - component: {fileID: 7762101387553782369}
   - component: {fileID: 509877999506481512}
   - component: {fileID: 6987693964448599663}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1525,7 +1525,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1570,7 +1570,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1615,7 +1615,7 @@ GameObject:
   - component: {fileID: 4628509910978772691}
   - component: {fileID: 6257749409369943589}
   - component: {fileID: 5830975047610155265}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1681,7 +1681,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1726,7 +1726,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1771,7 +1771,7 @@ GameObject:
   - component: {fileID: 116635927732784016}
   - component: {fileID: 5022367585807583923}
   - component: {fileID: 6407619863109673943}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: chain link11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1837,7 +1837,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.125, y: 0.1875}
+  m_Size: {x: 0.04, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1882,7 +1882,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.125, y: 0.1875}
-    newSize: {x: 0.125, y: 0.1875}
+    newSize: {x: 0.04, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

@@ -9,7 +9,7 @@ public class Fireball : MonoBehaviour
 
     public AudioSource Explode;
 
-    public int damage = 15;//how much damage the fireball does
+    public int damage = 25;//how much damage the fireball does
 
     Rigidbody2D rigidBody;//rigid body part of fireball
 
