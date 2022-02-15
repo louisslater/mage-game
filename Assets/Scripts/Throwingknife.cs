@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//throwing knife object
 public class Throwingknife : MonoBehaviour
 {
-    public int damage = 2;//how much damge the arrow does
+    public int damage = 2;//how much damge the knife does
     Rigidbody2D rigidBody;
     bool hasHit;//has the knife hit anything
 
@@ -15,7 +16,7 @@ public class Throwingknife : MonoBehaviour
 
     void Update()
     {
-        //if the arrow hasn't hit anything then set the angle to match the velocity
+        //if the knife hasn't hit anything then set the angle to match the velocity
         if (hasHit == false)
         {
             float angle = rigidBody.rotation - 2;
@@ -33,7 +34,7 @@ public class Throwingknife : MonoBehaviour
 
     IEnumerator KillKnife()
     {
-        //make arrow disappear after some seconds
+        //make knife disappear after some seconds
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
@@ -49,7 +50,7 @@ public class Throwingknife : MonoBehaviour
         {
             //damage enemy depending on how fast the knife is going
             enemy.TakeDamage((int)Mathf.Round(speed) * damage);
-            //get rid of arrow as it hit an enemy
+            //get rid of knife as it hit an enemy
             Destroy(gameObject);
         }
     }

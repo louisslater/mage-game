@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//handle fireballs that explode on impact
 public class Fireball : MonoBehaviour
 {
 

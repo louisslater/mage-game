@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// an ice spike weapon fired at the player 
 public class Icespike : MonoBehaviour
 {
 

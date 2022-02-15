@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
+//handles the movement of the dragon
 public class DragonGFX : MonoBehaviour
 {
     public AIPath aiPath;

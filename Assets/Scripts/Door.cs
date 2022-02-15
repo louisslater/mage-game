@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//the door at the end of the scene that completes the level and loads the next one
 public class Door : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)

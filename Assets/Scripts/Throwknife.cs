@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Manages throwing of multiple throwing knives
 public class Throwknife : MonoBehaviour
 {
     public GameObject knife;//knife object to be thrown
 
-    public AudioSource throwSound;
+    public AudioSource throwSound;//sounds made when knife is thrown
 
     public float launchForce = 12f;//initial force to throw knife
     public Transform shotPoint;//the point the arrow comes from
@@ -36,14 +37,17 @@ public class Throwknife : MonoBehaviour
 
         IEnumerator ThrowKnife()
         {
+            //throw 3 knives
             GameObject newKnife1 = Instantiate(knife, shotPoint.position, shotPoint.rotation);
             throwSound.Play();
             newKnife1.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
             yield return new WaitForSeconds(0.15f);
+            
             GameObject newKnife2 = Instantiate(knife, shotPoint.position, shotPoint.rotation);
             throwSound.Play();
             newKnife2.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
             yield return new WaitForSeconds(0.15f);
+            
             GameObject newKnife3 = Instantiate(knife, shotPoint.position, shotPoint.rotation);
             throwSound.Play();
             newKnife3.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;

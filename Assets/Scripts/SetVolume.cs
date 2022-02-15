@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+//class that allows the user to set volume level
 public class SetVolume : MonoBehaviour
 {
     public AudioMixer mixer;

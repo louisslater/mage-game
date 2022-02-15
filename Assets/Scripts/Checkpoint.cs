@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this class handles the checkpoints 
 public class Checkpoint : MonoBehaviour
 {
     public Animator animator;

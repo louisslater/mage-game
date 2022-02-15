@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-//this tells the enemy how and when to move
+//this tells the dragon how and when to move using waypoints
 public class DragonAI : MonoBehaviour
 {
     public Transform enemyGFX;//enemy graphics

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this class controls the blizzard weapons
 public class blizard : MonoBehaviour
 {
 

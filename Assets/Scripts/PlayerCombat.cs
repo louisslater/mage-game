@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//TODO Mage takes damage twice when colliding with player
+//handles the player attacks 
 public class PlayerCombat : MonoBehaviour
 {
 

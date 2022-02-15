@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// a single instance class to manage the game
 public class GameMaster : MonoBehaviour
 {
 

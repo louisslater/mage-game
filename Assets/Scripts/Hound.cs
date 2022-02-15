@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// the hounds that run along the ground
 public class Hound : Enemy
 {
     public AudioSource HoundHurt;

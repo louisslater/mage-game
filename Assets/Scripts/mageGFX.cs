@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// class to set the movement of the mage
 public class mageGFX : MonoBehaviour
 {
     public GameObject MageEnemy; //the mage gameobject

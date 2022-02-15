@@ -47,15 +47,20 @@ public class FrostWyvern : Enemy
             {
                 animator.SetBool("ProjectileShoot", true);
                 yield return new WaitForSeconds(0.46f);
+                
+                //fire 3 projectiles
                 shotPoint.transform.Rotate(0f, 0f, spread, Space.Self);
                 GameObject newprojectile1 = Instantiate(Projectile, shotPoint.position, shotPoint.rotation);
                 newprojectile1.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+                
                 shotPoint.transform.Rotate(0f, 0f, spread, Space.Self);
                 GameObject newprojectile2 = Instantiate(Projectile, shotPoint.position, shotPoint.rotation);
                 newprojectile2.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+                
                 shotPoint.transform.Rotate(0f, 0f, spread, Space.Self);
                 GameObject newprojectile3 = Instantiate(Projectile, shotPoint.position, shotPoint.rotation);
                 newprojectile3.GetComponent<Rigidbody2D>().velocity = shotPoint.transform.right * launchForce;
+                
                 yield return new WaitForSeconds(0.4f);
                 animator.SetBool("ProjectileShoot", false);
             }

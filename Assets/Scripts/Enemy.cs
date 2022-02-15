@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//this class is inherited by dragon and mage etc so that we can just
+//this generic class is inherited by dragon and mage etc so that we can just
 //call Die without having to handle it for each class
 public abstract class Enemy : MonoBehaviour
 {

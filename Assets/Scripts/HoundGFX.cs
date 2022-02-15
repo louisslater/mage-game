@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//handles the movement of the hounds
 public class HoundGFX : MonoBehaviour
 {
     public GameObject HoundEnemy; //the mage gameobject

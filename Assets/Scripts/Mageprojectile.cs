@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//the fireball projectiles that the mage fires
 public class Mageprojectile : MonoBehaviour
 {
 

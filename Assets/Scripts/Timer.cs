@@ -4,18 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
+//class to track time since game last reset
 public class Timer : MonoBehaviour
 {
-
-    private static DateTime startTime = DateTime.MinValue;
+    
+    private static DateTime startTime = DateTime.MinValue;//track the start time
 
     bool stopWatchActive = true;
-    public Text currentTimeText;
+    public Text currentTimeText;//formatted time since start
 
 
     void Start()
     {
-        if(startTime== DateTime.MinValue)
+        if(startTime== DateTime.MinValue)//set this once
         {
             startTime = DateTime.Now;
         }
@@ -23,6 +24,7 @@ public class Timer : MonoBehaviour
 
     void FixedUpdate()
     {
+        //update time on screen
         if (stopWatchActive == true)
         {
             TimeSpan time = DateTime.Now.Subtract(startTime);

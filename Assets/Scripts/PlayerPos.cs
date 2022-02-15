@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// class to handle setting player position when player reset to a checkpoint 
 public class PlayerPos : MonoBehaviour
 {
     private GameMaster gm;
@@ -19,6 +20,7 @@ public class PlayerPos : MonoBehaviour
     {
         health = player.GetComponent<PlayerHealth>();
 
+        //reload the scene
         if (health.currentHealth == 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
