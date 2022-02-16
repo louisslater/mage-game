@@ -5,14 +5,14 @@ using UnityEngine;
 //handles the movement of the hounds
 public class HoundGFX : MonoBehaviour
 {
-    public GameObject HoundEnemy; //the mage gameobject
+    public GameObject HoundEnemy; //the hound gameobject
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 MagePosition = HoundEnemy.transform.position;
+        Vector2 houndPosition = HoundEnemy.transform.position;
         Vector2 playerPosition = GameObject.Find("Player").transform.position;
-        Vector2 direction = playerPosition - MagePosition;
+        Vector2 direction = playerPosition - houndPosition;
 
 
         if (direction.x >= 0.01f)

@@ -67,8 +67,6 @@ public class Mageprojectile : MonoBehaviour
             GetComponent<Rigidbody2D>().isKinematic = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             StartCoroutine(ProjectileExplode());
-            //this.enabled = false;
-            //Destroy(gameObject);
         }
     }
 }

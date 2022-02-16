@@ -36,7 +36,7 @@ public class PlayerCombat : MonoBehaviour
         //show attack animation for player
         animator.SetTrigger("Attack");
 
-        //get all enemies in attaack range
+        //get all enemies in attack range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         //damage each enemy in range
