@@ -12,7 +12,8 @@ public class GameMaster : MonoBehaviour
    
     void Awake()
     {
-       if(instance == null)
+        lastCheckPointPos.Set(0f, -0.5f);
+       if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(instance);

@@ -12,16 +12,25 @@ public class PlayerPos : MonoBehaviour
 
     void Start()
     {
+        SetCheckpointPosToPlayer();
+    }
+
+    public void SetCheckpointPosToPlayer()
+    {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
     }
 
-   void Update()
+    void Update()
     {
         health = player.GetComponent<PlayerHealth>();
 
         //reload the scene
         if (health.currentHealth == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetKeyDown("backspace"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
