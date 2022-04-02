@@ -5,7 +5,7 @@ using UnityEngine;
 //throwing knife object
 public class Throwingknife : MonoBehaviour
 {
-    public int damage = 2;//how much damge the knife does
+    public int damage = 3;//how much damge the knife does
     Rigidbody2D rigidBody;
     bool hasHit;//has the knife hit anything
 
@@ -19,7 +19,7 @@ public class Throwingknife : MonoBehaviour
         //if the knife hasn't hit anything then set the angle to match the velocity
         if (hasHit == false)
         {
-            float angle = rigidBody.rotation - 2;
+            float angle = rigidBody.rotation - 7;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         }

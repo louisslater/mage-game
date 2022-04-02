@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5486707117796104321}
   - component: {fileID: 8196707365943675870}
   - component: {fileID: 7333797717266805768}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: rotating wood platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

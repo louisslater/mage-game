@@ -18,7 +18,7 @@ public class blizard : MonoBehaviour
 
     IEnumerator KillBlizard()
     {
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(5.0f);
         Destroy(gameObject);
     }
 

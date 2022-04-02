@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator RegenerateHealth()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         if (currentHealth < maxHealth && currentHealth != 0)
         {
             currentHealth = currentHealth + 1;

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 262806618032327641}
   - component: {fileID: 262806618032327646}
   - component: {fileID: 262806618032327643}
+  - component: {fileID: 1356338470515506178}
   m_Layer: 0
   m_Name: stakes
   m_TagString: Untagged
@@ -142,3 +143,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4376be97f9f696409b49bc97218d784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &1356338470515506178
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262806618032327647}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.05}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: -0.45}
+      - {x: -0.5016122, y: -0.2206}
+      - {x: -0.43527126, y: -0.06349562}
+      - {x: -0.40724564, y: -0.06349562}
+      - {x: -0.34189987, y: -0.2492421}
+      - {x: -0.28039575, y: -0.061883345}
+      - {x: -0.24108434, y: -0.061883345}
+      - {x: -0.195086, y: -0.2492421}
+      - {x: -0.09592152, y: -0.0637597}
+      - {x: -0.06333828, y: -0.061855216}
+      - {x: 0.011850357, y: -0.21949074}
+      - {x: 0.09436655, y: -0.061883345}
+      - {x: 0.12561655, y: -0.060271055}
+      - {x: 0.19034553, y: -0.21860875}
+      - {x: 0.24859142, y: -0.062136784}
+      - {x: 0.28213823, y: -0.06242709}
+      - {x: 0.3429649, y: -0.21896991}
+      - {x: 0.40885782, y: -0.06349562}
+      - {x: 0.43849564, y: -0.063495606}
+      - {x: 0.4983878, y: -0.22444122}
+      - {x: 0.5, y: -0.45}
