@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5420834130616743026}
   - component: {fileID: 5420834130616743027}
-  - component: {fileID: 5420834130616743025}
   - component: {fileID: 5358210045467260333}
+  - component: {fileID: 7409381015619048349}
   m_Layer: 0
   m_Name: brambles
   m_TagString: Untagged
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 241540923
-  m_SortingLayer: 1
+  m_SortingLayerID: 342066651
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 215431ebed36d0e4eb1a9b0eb910097c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5420834130616743025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5420834130616743029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4376be97f9f696409b49bc97218d784, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5358210045467260333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &7409381015619048349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5420834130616743029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc9a2605deb01046a0994adf22bb81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
