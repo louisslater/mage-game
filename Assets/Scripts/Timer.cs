@@ -24,6 +24,7 @@ public class Timer : MonoBehaviour
 
     void FixedUpdate()
     {
+
         //update time on screen
         if (stopWatchActive == true)
         {
@@ -40,6 +41,8 @@ public class Timer : MonoBehaviour
 
     public void StopStopwatch()
     {
+        TimeSpan time = DateTime.Now.Subtract(startTime);
+        currentTimeText.text = time.Minutes.ToString("00") + ":" + time.Seconds.ToString("00") + ":" + time.Milliseconds.ToString("000").Substring(0, 2);
         stopWatchActive = false;
     }
 
